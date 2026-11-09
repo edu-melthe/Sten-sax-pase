@@ -8,12 +8,11 @@ antal_omgangar = int(input("Ange antal omgångar vi ska spela --> "))
 for i in range (antal_omgangar):
     bot_val = rand.choice(lista)
     val = input("Välj 'Sten', 'Sax' eller 'Påse'--> ")
-    print(f"Spelomgång {i+1}\n", "-"*12)
-    print(f"{spelare} spelar: {val.title()}")
-    print(f"Python311 spelar: {bot_val}")
+    print(f"Spelomgång {i+1}\n", "-"*13)
+    print (f"{spelare} spelar: {spelarens_val}\nPython311 spelar: {datorns_val}")
     
     #Oavgjort
-    if bot_val.lower() == val.lower():
+    if bot_val == val:
         print(f"Vinnare i spelomgång {i+1}: Oavgjort")
     #Spelaren vinner
     elif (val == "Sten" and bot_val == "Sax") or \
